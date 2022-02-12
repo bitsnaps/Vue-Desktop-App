@@ -4,7 +4,8 @@ FROM gitpod/workspace-full:latest
 RUN sudo install-packages xvfb x11vnc xterm openjfx libopenjfx-java openbox
 
 # Install vuido dependencies
-RUN sudo apt install build-essential libgtk-3-dev -y
+RUN sudo apt-get update -y
+RUN sudo apt-get install build-essential libgtk-3-dev -y
 
 # Overwrite this env variable to use a different window manager
 ENV WINDOW_MANAGER="openbox"
