@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+- port: 8080
+  onOpen: open-preview
+
+tasks:
+- before: >
+    echo "starting..."
+  init: >
+    npm install
+  command: >
+    npm build
